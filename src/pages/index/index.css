@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap');
 main {
     display: flex;
 }
 h2 {
+    padding-top: 4vw;
     color: #000;
     font-family: Roboto;
-    font-size: 4vw;
+    font-size: 2.5vw;
     font-style: normal;
     font-weight: 200;
     line-height: normal;
+}
+.eolica{
+    width: 24vw;
+    height: auto;
 }
 .leftframe{
     display: flex;
@@ -18,7 +24,69 @@ h2 {
     align-items: center
 }
 .rightframe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
     width: 50vw;
     margin-right: 0px;
+    background: #25E48F;
+}
+.inputBox {
+    margin-top: 8vw;
+    background: #E9E9E9;
+    display: flex;
+    flex-direction: column;
+    width: 72%;
+    height: 40vw;
+    align-items: center;
+    border-radius: 2vw;
+    box-shadow: #000000;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.25));
+}
+@media screen and (max-width: 1020px) {
+    nav {
+      flex-direction: column; /* Muda a direção dos itens para uma coluna */
+      align-items: center; /* Centraliza os itens */
+      justify-content: flex-start;
+      height: 19vw;
+    }
+    .logo {
+        width:40vw;
+    }
+    h1 {
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+}
+@media screen and (max-width: 775px) {
+    .eolica{
+        width: 50vw;
+        height: auto;
+    }
+    h2 {
+        
+        font-size: 4vw;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .leftframe{
+        display: flex;
+        flex-direction: column;
+        height: 50vw;
+        width: 100%;
+        align-items: center
+    }
+    .rightframe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        margin-right: 0px;
+        background: #25E48F;
+        margin-top: 36vw;
+    }
 }

@@ -17,27 +17,29 @@ h1 {
     margin-left: 48px;
     margin-right: 48px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 200;
 }
 button {
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 200;
     width: 200px;
     height: 36px;
     background: #25E48F;
     border-radius: 20px;
-    border: 2px solid #FFF;
-    color: #FFFFFF;
+    border: 2px solid #000000;
+    color: #1C1C1C;
     flex-shrink: 0;
 }
 nav {
         background-color:#1C1C1C;
         height: 128px;
-        width: 100vw;
+        width: 100%;
         display: flex;
         align-Items: center;
         justify-content: space-between;
 }
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 1020px) {
     nav {
       flex-direction: column; /* Muda a direção dos itens para uma coluna */
       align-items: center; /* Centraliza os itens */
@@ -52,7 +54,7 @@ nav {
         margin-right: 2vw;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 775px) {
     nav{
         flex-direction: row;
         justify-content: center;
