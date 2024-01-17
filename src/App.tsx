@@ -1,10 +1,9 @@
-import {Navbar} from "./components/navbar/navbar"
 import './App.css'
+import { AppRoutes } from "./Routes"
 
 function App() {
   return (
-    <Navbar />
-    
+    <AppRoutes/>
     )
 }
 

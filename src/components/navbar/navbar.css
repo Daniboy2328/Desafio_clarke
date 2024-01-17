@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 .logo {
     width:400px;
     height:auto;
@@ -9,7 +9,6 @@
         display: flex;
         margin-right: 48px;
         align-items: center;
-        flex-shrink: 0;
 
         
 }
@@ -43,7 +42,7 @@ nav {
       flex-direction: column; /* Muda a direção dos itens para uma coluna */
       align-items: center; /* Centraliza os itens */
       justify-content: flex-start;
-      height: 18vw;
+      height: 19vw;
     }
     .logo {
         width:40vw;
@@ -54,6 +53,14 @@ nav {
     }
 }
 @media screen and (max-width: 600px) {
+    nav{
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    .logo {
+        width:60vw;
+    }
     .links {
         display: none;
     }
