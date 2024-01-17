@@ -12,14 +12,14 @@
 
         
 }
-h1 {
+.info {
     font-size: 20px;
     margin-left: 48px;
     margin-right: 48px;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
 }
-button {
+.botao {
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
@@ -31,7 +31,7 @@ button {
     color: #1C1C1C;
     flex-shrink: 0;
 }
-nav {
+.navbar {
         background-color:#1C1C1C;
         height: 128px;
         width: 100%;
@@ -40,7 +40,7 @@ nav {
         justify-content: space-between;
 }
 @media screen and (max-width: 1020px) {
-    nav {
+    .navbar {
       flex-direction: column; /* Muda a direção dos itens para uma coluna */
       align-items: center; /* Centraliza os itens */
       justify-content: flex-start;
@@ -49,13 +49,13 @@ nav {
     .logo {
         width:40vw;
     }
-    h1 {
+    .info {
         margin-left: 2vw;
         margin-right: 2vw;
     }
 }
 @media screen and (max-width: 775px) {
-    nav{
+    .navbar{
         flex-direction: row;
         justify-content: center;
         
