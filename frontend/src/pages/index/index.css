@@ -124,7 +124,7 @@
 }
 .botaoFechar {
     width: 30%;
-    height: 8%;
+    height: 8vw;
     border-radius: 2vw;
     border: none;
     background: #25E48F;
@@ -164,14 +164,32 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 100vh;
         width: 100%;
         margin-right: 0px;
         background: #25E48F;
         margin-top: 36vw;
     }
+    .inputBox {
+        width: 72%;
+        height: 90vw;
+        gap: 1rem;
+    }
+    .titulo{ 
+        font-size: 5vw;
+    }
+    .subtitulo{ 
+        font-size: 4vw;
+    }
+    .entrada{ 
+        font-size: 3vw;
+    }
+    .entrada::placeholder {
+        color: #B0B0B0;
+        font-style: roboto;
+        font-size: 1vw;
+    }
 }
-/* Estilizar a barra de rolagem */
+
 ::-webkit-scrollbar {
     width: 16px; 
   }
