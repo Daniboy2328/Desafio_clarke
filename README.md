@@ -59,7 +59,7 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
 3. Inicie o aplicativo React:
 
     ```bash
-    yarn start
+    yarn dev
     ```
 
    O frontend estará disponível em `http://localhost:5173/index`.
