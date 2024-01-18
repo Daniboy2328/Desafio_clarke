@@ -6,7 +6,7 @@ export function AppRoutes (){
     return (
         <Router>
                 <Routes>
-                    <Route path="/index" element={<><Navbar/><Index/></>}/>
+                    <Route path="/" element={<><Navbar/><Index/></>}/>
                 </Routes>
         </Router>
     )
