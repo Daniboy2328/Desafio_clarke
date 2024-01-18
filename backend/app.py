@@ -1,10 +1,16 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 CORS(app)
 
 app.static_folder = 'static'
+
+# Adicione a rota para servir arquivos estáticos
+@app.route('/static/<path:path>')
+def send_static(path):
+    return send_from_directory('static', path)
 
 fornecedores = [
     {"nome": "EcoPower", "logo": "static/logo1.jpeg", "limite_minimo_kwh": 0, "limite_maximo_kwh": 20000},
@@ -31,4 +37,5 @@ def calcular_melhores_fornecedores():
         return jsonify({"error": str(e)})
 
 if __name__ == '__main__':
+    # Certifique-se de remover o seguinte código se já estiver usando a configuração de produção
     app.run(debug=True)
