@@ -7,9 +7,7 @@
     color: #000;
     font-family: Roboto;
     font-size: 2.5vw;
-    font-style: normal;
     font-weight: 200;
-    line-height: normal;
 }
 .eolica{
     width: 24vw;
@@ -70,9 +68,7 @@
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     font-family: Roboto;
     font-size: 2vw;
-    font-style: normal;
     font-weight: 300;
-    line-height: normal;
     box-shadow: 0px 4px 0px 0px #14C275;
     transition: background-color 0.2s ease;
     transition: box-shadow 0.2s ease;
@@ -91,17 +87,59 @@
     outline: 2px solid #ACACAC;
     background: #E9E9E9;
     stroke-width: 2px;
-    color: #000000;
+    color: #616161;
     font-style: roboto;
-    font-size: 1vw;
+    font-size: 1.5vw;
+    padding-left: 1.5vw;
 }
 .entrada::placeholder {
     color: #B0B0B0;
-    padding: 0.8vw;
     font-style: roboto;
     font-size: 1vw;
-  }
+}
+.fornecedores{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 20vw;
+}
+.nomeFornecedor{
+    width: 80%;
+    color: #000;
+    font-family: Roboto;
+    font-size: 2vw;
+    font-weight: 200;
+}
+.tituloModal {
+    width: 80%;
+    color: #000;
+    font-family: Roboto;
+    font-size: 2vw;
+    font-weight: 200;
+}
 
+.logoFornecedor{
+    width: 10vw;
+}
+.botaoFechar {
+    width: 30%;
+    height: 8%;
+    border-radius: 2vw;
+    border: none;
+    background: #25E48F;
+    color: #FFF;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    font-family: Roboto;
+    font-size: 2vw;
+    font-weight: 200;
+    box-shadow: 0px 4px 0px 0px #14C275;
+}
+.caixaFornecedores {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
 @media screen and (max-width: 775px) {
     .eolica{
         width: 50vw;
@@ -133,3 +171,16 @@
         margin-top: 36vw;
     }
 }
+/* Estilizar a barra de rolagem */
+::-webkit-scrollbar {
+    width: 16px; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #505050; 
+    border-radius: 8px; 
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #1C1C1C;
+  }
+  

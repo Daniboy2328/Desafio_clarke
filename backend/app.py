@@ -13,7 +13,7 @@ def send_static(path):
     return send_from_directory('static', path)
 
 fornecedores = [
-    {"nome": "EcoPower", "logo": "static/logo1.jpeg", "limite_minimo_kwh": 0, "limite_maximo_kwh": 20000},
+    {"nome": "EcoPower", "logo": "static/logos/logo1.jpeg", "limite_minimo_kwh": 0, "limite_maximo_kwh": 20000},
     {"nome": "VoltLivre", "logo": "static/logos/logo2.jpeg", "limite_minimo_kwh": 15000, "limite_maximo_kwh": 30000},
     {"nome": "BioWatt", "logo": "static/logos/logo3.jpeg", "limite_minimo_kwh": 25000, "limite_maximo_kwh": 40000},
     {"nome": "ClearLight", "logo": "static/logos/logo4.jpeg", "limite_minimo_kwh": 35000, "limite_maximo_kwh": 50000},
@@ -26,6 +26,9 @@ def calcular_melhores_fornecedores():
         dados_cliente = request.get_json()
         consumo_cliente = dados_cliente.get('consumo')
 
+        if consumo_cliente <= 0:
+            return jsonify({"error": "O valor de kWh deve ser maior que zero."})
+        
         melhores_fornecedores = [
             {"nome": fornecedor["nome"], "logo": fornecedor["logo"]}
             for fornecedor in fornecedores

@@ -10,6 +10,24 @@ interface Fornecedor {
   nome: string;
   logo: string;
 }
+const customStyles: ReactModal.Styles = {
+  overlay: {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    border: 'none',
+    width: '50%',
+    height: '30vw',
+    margin: 'auto',
+    marginTop: '10vh',
+    borderRadius: '2vw',
+    position: 'unset',
+    padding: 'unset',
+  },
+};
 
 export function Index() {
   const [consumo, setConsumo] = useState<string>('');
@@ -63,18 +81,26 @@ export function Index() {
           </button>
         </div>
       </div>
-
-      {/* Modal */}
-      <Modal isOpen={modalAberto} onRequestClose={fecharModal}>
-        <h2>Fornecedores Indicados: </h2>
-        <ul>
+      <Modal isOpen={modalAberto} onRequestClose={fecharModal} style={customStyles}>
+        <h2 className='tituloModal'>Fornecedores Indicados: 
+        </h2>
+        <div className='fornecedores'>
           {resultados.map((fornecedor) => (
-            <li key={fornecedor.nome}>
-              {fornecedor.nome} - <img src={`http://127.0.0.1:5000/${fornecedor.logo}`} alt={fornecedor.nome} />
-            </li>
+            <div key={fornecedor.nome} className='caixaFornecedores'>
+              <div className='nomeFornecedor'>
+                {fornecedor.nome}
+              </div> 
+              <img 
+                src={`http://127.0.0.1:5000/${fornecedor.logo}`} 
+                alt={fornecedor.nome} 
+                className='logoFornecedor'/>
+            </div>
           ))}
-        </ul>
-        <button onClick={fecharModal}>Fechar Modal</button>
+        </div>
+        <button onClick={fecharModal} className='botaoFechar'>
+          Fechar
+        </button>
+        
       </Modal>
     </main>
   );
