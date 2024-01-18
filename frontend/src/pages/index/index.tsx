@@ -10,6 +10,7 @@ interface Fornecedor {
   nome: string;
   logo: string;
 }
+
 const customStyles: ReactModal.Styles = {
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -35,12 +36,23 @@ export function Index() {
   const [modalAberto, setModalAberto] = useState<boolean>(false);
 
   const handleCalcularMelhoresFornecedores = async () => {
+    const consumoNumber = Number(consumo);
+    if (isNaN(consumoNumber) || consumoNumber <= 0) {
+      alert('Por favor, insira um valor válido maior que zero no campo.');
+      return;
+    }
+  
+    if (consumoNumber > 60000) {
+      alert('Nenhum fornecedor disponível para consumo maior que 60000kWh.');
+      return;
+    }
+  
     try {
       const response = await axios.post<{ melhores_fornecedores: Fornecedor[] }>(
         'http://127.0.0.1:5000/calcular-melhores-fornecedores',
-        { consumo: Number(consumo) }
+        { consumo: consumoNumber }
       );
-
+  
       setResultados(response.data.melhores_fornecedores);
       setModalAberto(true);
     } catch (error) {
@@ -100,7 +112,6 @@ export function Index() {
         <button onClick={fecharModal} className='botaoFechar'>
           Fechar
         </button>
-        
       </Modal>
     </main>
   );
