@@ -62,6 +62,6 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
     yarn dev
     ```
 
-   O frontend estará disponível em `http://localhost:5173/index`.
+   O frontend estará disponível em `http://localhost:5173/`.
 
 Agora, você pode acessar o site em seu navegador e começar a calcular os melhores fornecedores de energia com base no seu consumo mensal.
