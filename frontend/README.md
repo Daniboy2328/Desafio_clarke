@@ -1,3 +1,7 @@
+# Protótipo
+Fiz rapidamente um protótipo do projeto para agilizar a estilizaçao.
+Link do protótipo: https://www.figma.com/file/cBBPQFyxAxlSEWnHhFxzIt/Untitled?type=design&node-id=0%3A1&mode=dev
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
