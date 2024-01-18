@@ -3,7 +3,7 @@ import './index.css';
 import { useState } from 'react';
 import Modal from 'react-modal';
 import axios from 'axios';
-
+import turbina from "../../images/Wind turbine-bro.png"
 Modal.setAppElement('#root');
 
 interface Fornecedor {
@@ -20,8 +20,8 @@ const customStyles: ReactModal.Styles = {
     flexDirection: 'column',
     alignItems: 'center',
     border: 'none',
-    width: '50%',
-    height: '30vw',
+    width: '60vw',
+    height: '32vw',
     margin: 'auto',
     marginTop: '10vh',
     borderRadius: '2vw',
@@ -49,7 +49,7 @@ export function Index() {
   
     try {
       const response = await axios.post<{ melhores_fornecedores: Fornecedor[] }>(
-        'http://127.0.0.1:5000/calcular-melhores-fornecedores',
+        'https://daniboy2328.pythonanywhere.com/calcular-melhores-fornecedores',
         { consumo: consumoNumber }
       );
   
@@ -70,7 +70,7 @@ export function Index() {
         <h2 className='tituloEsquerda'>
           Não jogue dinheiro fora!<br />Encontre o melhor<br />fornecedor para as<br />suas necessidades.
         </h2>
-        <img src="src\images\Wind turbine-bro.png" className='eolica'/>
+        <img src={turbina} className='eolica'/>
       </div>
       <div className='rightframe'>
         <div className='inputBox'>
@@ -87,6 +87,7 @@ export function Index() {
             placeholder='Digite aqui.'
             value={consumo}
             onChange={(e) => setConsumo(e.target.value)}
+            type='number'
           />
           <button className='calcular' onClick={handleCalcularMelhoresFornecedores}>
             Calcular
@@ -103,7 +104,7 @@ export function Index() {
                 {fornecedor.nome}
               </div> 
               <img 
-                src={`http://127.0.0.1:5000/${fornecedor.logo}`} 
+                src={`https://daniboy2328.pythonanywhere.com/${fornecedor.logo}`} 
                 alt={fornecedor.nome} 
                 className='logoFornecedor'/>
             </div>
