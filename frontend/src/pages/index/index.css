@@ -124,8 +124,8 @@
 }
 .botaoFechar {
     width: 30%;
-    height: 8vw;
-    border-radius: 2vw;
+    height: 4vw;
+    border-radius: 4vw;
     border: none;
     background: #25E48F;
     color: #FFF;
@@ -134,6 +134,7 @@
     font-size: 2vw;
     font-weight: 200;
     box-shadow: 0px 4px 0px 0px #14C275;
+    margin-bottom: 2vw;
 }
 .caixaFornecedores {
     display: flex;
